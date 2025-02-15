@@ -7,3 +7,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(256, 512)
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 512.0
+
+[node name="Base" type="TabContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+current_tab = 0
+
+[node name="Calories" type="Control" parent="Base"]
+layout_mode = 2
+metadata/_tab_index = 0
