@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://delsb0b7je0k4"]
+
+[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="1_psnsr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_psnsr")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 0
+offset_left = 128.0
+offset_top = 3.0
+offset_right = 384.0
+offset_bottom = 67.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+text = "Button"
