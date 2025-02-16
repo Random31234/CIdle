@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=2 format=3 uid="uid://ircy7bd8ydme"]
+
+[ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -30,11 +32,20 @@ offset_right = 704.0
 offset_bottom = 184.0
 text = "Energy"
 
-[node name="Calories" type="VBoxContainer" parent="Base game/Cycle"]
-layout_mode = 0
+[node name="ScrollContainer" type="ScrollContainer" parent="Base game/Cycle"]
+custom_minimum_size = Vector2(384, 384)
+layout_mode = 2
 offset_top = 152.0
 offset_right = 384.0
-offset_bottom = 536.0
+offset_bottom = 538.0
+scroll_deadzone = 1
+
+[node name="Calories" type="VBoxContainer" parent="Base game/Cycle/ScrollContainer"]
+custom_minimum_size = Vector2(384, 3840)
+layout_mode = 2
+
+[node name="Control" parent="Base game/Cycle/ScrollContainer/Calories" instance=ExtResource("1_g87k8")]
+layout_mode = 2
 
 [node name="Capacity" type="VBoxContainer" parent="Base game/Cycle"]
 layout_mode = 0

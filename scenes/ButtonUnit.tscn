@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="1_psnsr"]
 
 [node name="Control" type="Control"]
+custom_minimum_size = Vector2(384, 128)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,8 @@ offset_left = 128.0
 offset_top = 3.0
 offset_right = 384.0
 offset_bottom = 67.0
+text = "Test
+"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
