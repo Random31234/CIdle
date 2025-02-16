@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ircy7bd8ydme"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Base game" type="TabContainer" parent="."]
+layout_mode = 0
+offset_top = 81.0
+offset_right = 1152.0
+offset_bottom = 648.0
+current_tab = 0
+
+[node name="Cycle" type="Control" parent="Base game"]
+custom_minimum_size = Vector2(1152, 512)
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Buy energy button" type="Button" parent="Base game/Cycle"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 152.0
+offset_right = 704.0
+offset_bottom = 184.0
+text = "Energy"
+
+[node name="Calories" type="VBoxContainer" parent="Base game/Cycle"]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 256.0
+offset_bottom = 536.0
+
+[node name="Capacity" type="VBoxContainer" parent="Base game/Cycle"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 152.0
+offset_right = 1152.0
+offset_bottom = 536.0
