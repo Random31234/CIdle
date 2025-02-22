@@ -65,6 +65,14 @@ layout_mode = 2
 [node name="Control" parent="Base game/Cycle/Capacity scroll container/Calories" instance=ExtResource("1_g87k8")]
 layout_mode = 2
 
+[node name="Turn button" type="Button" parent="Base game/Cycle"]
+custom_minimum_size = Vector2(128, 32)
+offset_left = 448.0
+offset_top = 280.0
+offset_right = 704.0
+offset_bottom = 312.0
+text = "End turn"
+
 [node name="Options" type="Control" parent="Base game"]
 editor_description = "Options menu"
 visible = false
