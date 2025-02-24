@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=4 format=3 uid="uid://ircy7bd8ydme"]
 
+[ext_resource type="Script" path="res://Scripts/MainCycle.gd" id="1_0c5bb"]
 [ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
+[ext_resource type="Script" path="res://scenes/ButtonUnitContainer.gd" id="1_n3a30"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,6 +23,7 @@ current_tab = 0
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
+script = ExtResource("1_0c5bb")
 metadata/_tab_index = 0
 
 [node name="Buy energy button" type="Button" parent="Base game/Cycle"]
@@ -44,8 +47,12 @@ scroll_deadzone = 1
 [node name="Calories" type="VBoxContainer" parent="Base game/Cycle/Calories Scroll Container"]
 custom_minimum_size = Vector2(384, 3840)
 layout_mode = 2
+script = ExtResource("1_n3a30")
 
 [node name="Control" parent="Base game/Cycle/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
+layout_mode = 2
+
+[node name="Control2" parent="Base game/Cycle/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
 layout_mode = 2
 
 [node name="Capacity scroll container" type="ScrollContainer" parent="Base game/Cycle"]
@@ -67,6 +74,7 @@ layout_mode = 2
 
 [node name="Turn button" type="Button" parent="Base game/Cycle"]
 custom_minimum_size = Vector2(128, 32)
+layout_mode = 0
 offset_left = 448.0
 offset_top = 280.0
 offset_right = 704.0

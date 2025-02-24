@@ -11,6 +11,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 128.0
+text = "Button"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_psnsr")
 centered = false
@@ -24,11 +32,3 @@ offset_right = 384.0
 offset_bottom = 67.0
 text = "Test
 "
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 64.0
-offset_right = 384.0
-offset_bottom = 128.0
-text = "Button"
