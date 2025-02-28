@@ -8,6 +8,14 @@ func _ready() -> void:
 		
 		x.get_child(0).connect("button_down",valuePass.bind(x.get_index()))
 
+
+func setUnit():
+	
+	
+	for x in get_children():
+		
+		x.get_child(0).connect("button_down",valuePass.bind(x.get_index()))
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

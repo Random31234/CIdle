@@ -19,12 +19,13 @@ offset_right = 1152.0
 offset_bottom = 648.0
 current_tab = 0
 
-[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("calories")]
+[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit")]
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
 script = ExtResource("1_0c5bb")
-calories = NodePath("Calories Scroll Container/Calories")
+caloriesUnit = NodePath("Calories Scroll Container/Calories")
+capacityUnit = NodePath("Capacity scroll container/Capacity")
 metadata/_tab_index = 0
 
 [node name="Buy energy button" type="Button" parent="Base game/Cycle"]
