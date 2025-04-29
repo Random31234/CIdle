@@ -31,12 +31,13 @@ extends Control
 @export var calNames:Array[String]
 @export var capNames:Array[String]
 
-
+var buyamount:int
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	caloriesUnit.setUnit()
+	capacityUnit.setUnit()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,7 +48,7 @@ func _process(delta: float) -> void:
 
 #this handles buying calories items, consumes capacity
 func _on_calories_value(i: int) -> void:
-	print(i)
+	pass
 	
 
 
