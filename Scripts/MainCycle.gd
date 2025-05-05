@@ -6,38 +6,23 @@ extends Control
 @export var calories:Big
 @export var capacity:Big
 @export var energy:Big
-
-#the shop items
-
-#prices of the items
-@export var calPrices:Array[Big]
-@export var capPrices:Array[Big]
-@export var energyPrice:Big
-#levels of item in the shop
-@export var calLevels:Array[Big]
-@export var capLevels:Array[Big]
-#effects of items in the shop
-@export var calEffect:Array[Big]
-@export var capEffect:Array[Big]
-#scaling of items in the shop.
-@export var calCostScaling:Array[Big]
-@export var capCostScaling:Array[Big]
+#buyables
+@export var cal:Array[baseUnit]
+@export var cap:Array[baseUnit]
+@export var ene:baseUnit
 #turn tracker
 @export var turns:Big
+@export var turnEnergyCost:Big
 
 #system for display purposes
-@export var calSprites:Array[Sprite2D]
-@export var capSprites:Array[Sprite2D]
-@export var calNames:Array[String]
-@export var capNames:Array[String]
 
 var buyamount:int
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	caloriesUnit.setUnit()
-	capacityUnit.setUnit()
+	caloriesUnit.setUnit(cal)
+	capacityUnit.setUnit(cap)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,3 +42,9 @@ func _on_calories_value(i: int) -> void:
 func _on_capacity_value(i: int) -> void:
 	print(i)
 	print("ca")
+
+
+func endTurn() -> void:
+	energy = energy.subtract(energy,turnEnergyCost)
+	
+	turns.add(turns,1)

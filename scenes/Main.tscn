@@ -1,8 +1,199 @@
-[gd_scene load_steps=4 format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=40 format=3 uid="uid://ircy7bd8ydme"]
 
 [ext_resource type="Script" path="res://Scripts/mainCycle.gd" id="1_0c5bb"]
 [ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
 [ext_resource type="Script" path="res://Scripts/buttonUnitContainer.gd" id="1_n3a30"]
+[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_4bjm2"]
+[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="2_x71ss"]
+[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="3_2qkvh"]
+
+[sub_resource type="Resource" id="Resource_kony0"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_0ex3l"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_lbdo5"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_yfq3s"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_3c1jk"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_fvr7p"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_fpq42"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_r2tr1"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_l1333"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_ycyr2"]
+script = ExtResource("2_4bjm2")
+price = SubResource("Resource_l1333")
+level = SubResource("Resource_r2tr1")
+effect = SubResource("Resource_fpq42")
+costScaleMult = SubResource("Resource_fvr7p")
+costScaleAdd = SubResource("Resource_3c1jk")
+cost = SubResource("Resource_yfq3s")
+name = "apple"
+texture = ExtResource("2_x71ss")
+
+[sub_resource type="Resource" id="Resource_37ed6"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_3igvg"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_pk8ya"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_an64f"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_43xc8"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_xquw2"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_ht734"]
+script = ExtResource("2_4bjm2")
+price = SubResource("Resource_xquw2")
+level = SubResource("Resource_43xc8")
+effect = SubResource("Resource_an64f")
+costScaleMult = SubResource("Resource_pk8ya")
+costScaleAdd = SubResource("Resource_3igvg")
+cost = SubResource("Resource_37ed6")
+name = "bannana"
+texture = ExtResource("2_x71ss")
+
+[sub_resource type="Resource" id="Resource_i5ixb"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_pukxx"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_bujgi"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_nn0nk"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_a3uw7"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_7e6ye"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_28c65"]
+script = ExtResource("2_4bjm2")
+price = SubResource("Resource_7e6ye")
+level = SubResource("Resource_a3uw7")
+effect = SubResource("Resource_nn0nk")
+costScaleMult = SubResource("Resource_bujgi")
+costScaleAdd = SubResource("Resource_pukxx")
+cost = SubResource("Resource_i5ixb")
+name = "Stretch"
+texture = ExtResource("2_x71ss")
+
+[sub_resource type="Resource" id="Resource_1brnk"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_hplmi"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_leyu1"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_tn6s8"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_i7d2w"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_ixnat"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_76n2k"]
+script = ExtResource("2_4bjm2")
+price = SubResource("Resource_ixnat")
+level = SubResource("Resource_i7d2w")
+effect = SubResource("Resource_tn6s8")
+costScaleMult = SubResource("Resource_leyu1")
+costScaleAdd = SubResource("Resource_hplmi")
+cost = SubResource("Resource_1brnk")
+name = ""
+
+[sub_resource type="Resource" id="Resource_8ykva"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_3avrd"]
+script = ExtResource("3_2qkvh")
+mantissa = 1.0
+exponent = 0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,20 +214,59 @@ editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
 script = ExtResource("1_0c5bb")
-caloriesUnit = NodePath("Calories Scroll Container/Calories")
-capacityUnit = NodePath("Capacity scroll container/Capacity")
+caloriesUnit = NodePath("Calories/Calories Scroll Container/Calories")
+capacityUnit = NodePath("Capacity/Capacity scroll container/Capacity")
+calories = SubResource("Resource_kony0")
+capacity = SubResource("Resource_0ex3l")
+energy = SubResource("Resource_lbdo5")
+cal = Array[ExtResource("2_4bjm2")]([SubResource("Resource_ycyr2"), SubResource("Resource_ht734")])
+cap = Array[ExtResource("2_4bjm2")]([SubResource("Resource_28c65")])
+ene = SubResource("Resource_76n2k")
+turns = SubResource("Resource_8ykva")
+turnEnergyCost = SubResource("Resource_3avrd")
 metadata/_tab_index = 0
 
-[node name="Buy energy button" type="Button" parent="Base game/Cycle"]
+[node name="Turn button" type="Button" parent="Base game/Cycle"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 585.0
+offset_right = 704.0
+offset_bottom = 617.0
+text = "End turn"
+
+[node name="Energy system" type="Control" parent="Base game/Cycle"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Buy energy button" type="Button" parent="Base game/Cycle/Energy system"]
+modulate = Color(1, 1, 0.627451, 1)
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 0
 offset_left = 448.0
 offset_top = 152.0
 offset_right = 704.0
 offset_bottom = 184.0
-text = "Energy"
+text = "Turn x calories to x energy"
 
-[node name="Calories Scroll Container" type="ScrollContainer" parent="Base game/Cycle"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Base game/Cycle/Energy system"]
+modulate = Color(1, 1, 0.470588, 1)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 184.0
+offset_right = 704.0
+offset_bottom = 312.0
+text = "Energy amount:
+Calorie cost:
+Buying amount:"
+
+[node name="Calories" type="Control" parent="Base game/Cycle"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Calories Scroll Container" type="ScrollContainer" parent="Base game/Cycle/Calories"]
 editor_description = "This object holds all calories buttons"
 custom_minimum_size = Vector2(384, 384)
 layout_mode = 2
@@ -45,18 +275,37 @@ offset_right = 384.0
 offset_bottom = 538.0
 scroll_deadzone = 1
 
-[node name="Calories" type="VBoxContainer" parent="Base game/Cycle/Calories Scroll Container"]
+[node name="Calories" type="VBoxContainer" parent="Base game/Cycle/Calories/Calories Scroll Container"]
 custom_minimum_size = Vector2(384, 3840)
 layout_mode = 2
 script = ExtResource("1_n3a30")
+type = "capacity"
 
-[node name="Control" parent="Base game/Cycle/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
+[node name="Control" parent="Base game/Cycle/Calories/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
 layout_mode = 2
 
-[node name="Control2" parent="Base game/Cycle/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
+[node name="Control2" parent="Base game/Cycle/Calories/Calories Scroll Container/Calories" instance=ExtResource("1_g87k8")]
 layout_mode = 2
 
-[node name="Capacity scroll container" type="ScrollContainer" parent="Base game/Cycle"]
+[node name="calorie amount" type="RichTextLabel" parent="Base game/Cycle/Calories"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="calories per turn" type="RichTextLabel" parent="Base game/Cycle/Calories"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 0
+offset_top = 576.0
+offset_right = 173.0
+offset_bottom = 616.0
+
+[node name="Capacity" type="Control" parent="Base game/Cycle"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Capacity scroll container" type="ScrollContainer" parent="Base game/Cycle/Capacity"]
 editor_description = "This object holds all calories buttons"
 custom_minimum_size = Vector2(384, 384)
 layout_mode = 2
@@ -66,22 +315,30 @@ offset_right = 1152.0
 offset_bottom = 536.0
 scroll_deadzone = 1
 
-[node name="Capacity" type="VBoxContainer" parent="Base game/Cycle/Capacity scroll container"]
+[node name="Capacity" type="VBoxContainer" parent="Base game/Cycle/Capacity/Capacity scroll container"]
 custom_minimum_size = Vector2(384, 3840)
 layout_mode = 2
 script = ExtResource("1_n3a30")
+type = "energy"
 
-[node name="Control" parent="Base game/Cycle/Capacity scroll container/Capacity" instance=ExtResource("1_g87k8")]
+[node name="Control" parent="Base game/Cycle/Capacity/Capacity scroll container/Capacity" instance=ExtResource("1_g87k8")]
 layout_mode = 2
 
-[node name="Turn button" type="Button" parent="Base game/Cycle"]
-custom_minimum_size = Vector2(128, 32)
+[node name="capacity amount" type="RichTextLabel" parent="Base game/Cycle/Capacity"]
+custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
-offset_left = 448.0
-offset_top = 280.0
-offset_right = 704.0
-offset_bottom = 312.0
-text = "End turn"
+offset_left = 767.0
+offset_top = 1.0
+offset_right = 807.0
+offset_bottom = 41.0
+
+[node name="capacity per turn" type="RichTextLabel" parent="Base game/Cycle/Capacity"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 0
+offset_left = 757.0
+offset_top = 577.0
+offset_right = 797.0
+offset_bottom = 617.0
 
 [node name="Options" type="Control" parent="Base game"]
 editor_description = "Options menu"
@@ -89,5 +346,6 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[connection signal="Value" from="Base game/Cycle/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
-[connection signal="Value" from="Base game/Cycle/Capacity scroll container/Capacity" to="Base game/Cycle" method="_on_capacity_value"]
+[connection signal="button_down" from="Base game/Cycle/Turn button" to="Base game/Cycle" method="endTurn"]
+[connection signal="Value" from="Base game/Cycle/Calories/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
+[connection signal="Value" from="Base game/Cycle/Capacity/Capacity scroll container/Capacity" to="Base game/Cycle" method="_on_capacity_value"]

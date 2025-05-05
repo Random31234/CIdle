@@ -1,0 +1,4 @@
+First goal, set up a proper unit system to take in values accordingly.
+System is now in place, now need to pull out values, and then update em accordingly
+The next step is to work on the mathematics behind the upgrades
+Currently working on base side first, and then work can be done on the adder side.
