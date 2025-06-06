@@ -23,7 +23,7 @@ var buyamount:int
 func _ready() -> void:
 	caloriesUnit.setUnit(cal)
 	capacityUnit.setUnit(cap)
-
+	cal[0].buy(Big.new(1,4),Big.new(3,0))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -24,7 +24,7 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_yfq3s"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_3c1jk"]
@@ -34,7 +34,7 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_fvr7p"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 1.2
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_fpq42"]
@@ -49,7 +49,7 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_l1333"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_ycyr2"]
@@ -147,7 +147,7 @@ texture = ExtResource("2_x71ss")
 
 [sub_resource type="Resource" id="Resource_1brnk"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_hplmi"]

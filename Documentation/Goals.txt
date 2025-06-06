@@ -1,4 +1,19 @@
 First goal, set up a proper unit system to take in values accordingly.
 System is now in place, now need to pull out values, and then update em accordingly
 The next step is to work on the mathematics behind the upgrades
+The mathematics is incomplete, buy amount is not properly set, finish that then can work on next step.
 Currently working on base side first, and then work can be done on the adder side.
+
+
+#note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
+ a specific function is needed to be in place just in case for one being used.
+
+mathematics are as follows for base side
+bs = base
+ms = multiplier scaler
+x = x terms
+(bs * (ms^(x+1) -1) /ms-1)
+
+adder side
+ad = adder
+((ad*ms) / ((ms-1)^2)) * (ms ^(x+1) -1 - (x+1)(ms-1))
