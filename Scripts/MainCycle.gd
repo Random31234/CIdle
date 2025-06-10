@@ -14,9 +14,9 @@ extends Control
 @export var turns:Big
 @export var turnEnergyCost:Big
 
+
 #system for display purposes
 
-var buyamount:int
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,8 +33,10 @@ func _process(delta: float) -> void:
 
 #this handles buying calories items, consumes capacity
 func _on_calories_value(i: int) -> void:
-	pass
-	
+	print(i)
+	print("cl")
+	#need to make condition for buying upgrade
+	capacity = capacity.subtract(capacity,cal[i].buy(capacity,Big.new(1)))
 
 
 #this handles buying capacity items, consumes energy

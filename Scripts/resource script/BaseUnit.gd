@@ -47,11 +47,15 @@ func buy(export:Big,amo:Big):
 	bought = Big.new(0,0)
 	#first half of equation
 	if (amo.isLessThanOrEqualTo(0)):
-		bought = Big.new(-1.0)
+		bought = Big.new(0)
+		print("Nothing is bought")
 		return bought
 		
 	if(amo.isEqualTo(1)):
+		print("One is bought")
 		return base
+	
+	#conditions should be put into place for multipliers that are at 1
 	amo =amo.subtract(amo,1)
 	#tests need to be done to get calculations set up.
 	b = b.divide(b.multiply(base,b.subtract(b.power(csm,b.add(amo,1)),1)),b.subtract(csm,1))
