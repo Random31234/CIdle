@@ -247,9 +247,10 @@ static func add(x, y) -> Big:
 
 ## Subtracts two numbers and returns the Big number result
 static func subtract(x, y) -> Big:
-	var negated_y := Big.new(y)
-	negated_y.mantissa= negated_y.mantissa *-1
-	return add(negated_y, x)
+	x = Big._typeCheck(x)
+	y = Big._typeCheck(y)
+	
+	return add(y.multiply(-1,y), x)
 
 
 ## Multiplies two numbers and returns the Big number result

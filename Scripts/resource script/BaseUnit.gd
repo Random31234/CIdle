@@ -1,15 +1,16 @@
 extends Resource
 
 class_name baseUnit
-#cost
+#cost and effect base
 @export var price:Big
-@export var level:Big
 @export var effect:Big
 #scalers
 @export var costScaleMult:Big
 @export var costScaleAdd:Big
-#current cost/base cost
+#current cost and level
 @export var cost:Big
+@export var level:Big
+#cosmetics
 @export var name:String
 @export var texture:Texture2D
 
@@ -56,12 +57,39 @@ func buy(export:Big,amo:Big):
 		return base
 	
 	#conditions should be put into place for multipliers that are at 1
-	amo =amo.subtract(amo,1)
+	
+	
+	
 	#tests need to be done to get calculations set up.
+	
+	#if the multiply scaler is 1
+	if(csm.isEqualTo(1)):
+		b = b.multiply(base,amo)
+		if(csa.isGreaterThan(0)):
+			a = a.multiply(csa,amo.divide(amo.multiply(amo.subtract(amo,1),amo),2))
+		
+		b  = b.add(a,b)
+		print(b.toScientific() + " Output of upgrade")
+		return b
+	amo =amo.subtract(amo,1)
+	#otherwise if the multiply scaler is above or less than 1
 	b = b.divide(b.multiply(base,b.subtract(b.power(csm,b.add(amo,1)),1)),b.subtract(csm,1))
 	if(csa.isGreaterThan(0)):
 		a = a.multiply(a.divide(a.multiply(csa,csm),a.power(a.subtract(csm,Big.new(1)),Big.new(2))),a.subtract(a.power(csm,a.add(amo,Big.new(1))),a.subtract(Big.new(1),a.multiply(a.add(amo,Big.new(1)),a.subtract(csm,Big.new(1))))))
 	b = b.add(a,b)
-	if(b.isLessThanOrEqualTo(export)):
-		print(b.toScientific() + " Output of upgrade")
-		return b
+	
+	
+	print(b.toScientific() + " Output of upgrade")
+	return b
+
+
+func addLevel(ad:Big):
+	level =level.add(ad,level)
+	var h = Big.new(1,0)
+	h= cost.multiply(price,costScaleMult.power(costScaleMult,level))
+	var a = Big.new(1,0)
+	a = cost.multiply(costScaleAdd,level)
+	var d = Big.new(1,0)
+	d = costScaleMult.power(costScaleMult,level.divide(level.multiply(level,level.add(1,level)),2))
+	cost = h.add(h,a.multiply(a,d))
+	print(cost)

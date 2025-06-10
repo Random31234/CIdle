@@ -9,7 +9,7 @@
 
 [sub_resource type="Resource" id="Resource_kony0"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 5.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_0ex3l"]
@@ -29,12 +29,12 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_3c1jk"]
 script = ExtResource("3_2qkvh")
-mantissa = 0.0
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_fvr7p"]
 script = ExtResource("3_2qkvh")
-mantissa = 1.2
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_fpq42"]
@@ -53,13 +53,14 @@ mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_ycyr2"]
+resource_local_to_scene = true
 script = ExtResource("2_4bjm2")
 price = SubResource("Resource_l1333")
-level = SubResource("Resource_r2tr1")
 effect = SubResource("Resource_fpq42")
 costScaleMult = SubResource("Resource_fvr7p")
 costScaleAdd = SubResource("Resource_3c1jk")
 cost = SubResource("Resource_yfq3s")
+level = SubResource("Resource_r2tr1")
 name = "apple"
 texture = ExtResource("2_x71ss")
 
@@ -94,13 +95,14 @@ mantissa = 0.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_ht734"]
+resource_local_to_scene = true
 script = ExtResource("2_4bjm2")
 price = SubResource("Resource_xquw2")
-level = SubResource("Resource_43xc8")
 effect = SubResource("Resource_an64f")
 costScaleMult = SubResource("Resource_pk8ya")
 costScaleAdd = SubResource("Resource_3igvg")
 cost = SubResource("Resource_37ed6")
+level = SubResource("Resource_43xc8")
 name = "bannana"
 texture = ExtResource("2_x71ss")
 
@@ -137,11 +139,11 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_28c65"]
 script = ExtResource("2_4bjm2")
 price = SubResource("Resource_7e6ye")
-level = SubResource("Resource_a3uw7")
 effect = SubResource("Resource_nn0nk")
 costScaleMult = SubResource("Resource_bujgi")
 costScaleAdd = SubResource("Resource_pukxx")
 cost = SubResource("Resource_i5ixb")
+level = SubResource("Resource_a3uw7")
 name = "Stretch"
 texture = ExtResource("2_x71ss")
 
@@ -178,11 +180,11 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_76n2k"]
 script = ExtResource("2_4bjm2")
 price = SubResource("Resource_ixnat")
-level = SubResource("Resource_i7d2w")
 effect = SubResource("Resource_tn6s8")
 costScaleMult = SubResource("Resource_leyu1")
 costScaleAdd = SubResource("Resource_hplmi")
 cost = SubResource("Resource_1brnk")
+level = SubResource("Resource_i7d2w")
 name = ""
 
 [sub_resource type="Resource" id="Resource_8ykva"]
@@ -209,7 +211,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 current_tab = 0
 
-[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit")]
+[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "calText", "calPTText", "capText", "capPTText")]
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
@@ -224,6 +226,10 @@ cap = Array[ExtResource("2_4bjm2")]([SubResource("Resource_28c65")])
 ene = SubResource("Resource_76n2k")
 turns = SubResource("Resource_8ykva")
 turnEnergyCost = SubResource("Resource_3avrd")
+calText = NodePath("Calories/calorie amount")
+calPTText = NodePath("Calories/calories per turn")
+capText = NodePath("Capacity/capacity amount")
+capPTText = NodePath("Capacity/capacity per turn")
 metadata/_tab_index = 0
 
 [node name="Turn button" type="Button" parent="Base game/Cycle"]
@@ -292,13 +298,15 @@ custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+text = "Calories:"
 
 [node name="calories per turn" type="RichTextLabel" parent="Base game/Cycle/Calories"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
-offset_top = 576.0
-offset_right = 173.0
-offset_bottom = 616.0
+offset_top = 40.0
+offset_right = 256.0
+offset_bottom = 80.0
+text = "CPT:"
 
 [node name="Capacity" type="Control" parent="Base game/Cycle"]
 anchors_preset = 0
@@ -327,24 +335,19 @@ layout_mode = 2
 [node name="capacity amount" type="RichTextLabel" parent="Base game/Cycle/Capacity"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
-offset_left = 767.0
-offset_top = 1.0
-offset_right = 807.0
-offset_bottom = 41.0
+offset_left = 896.0
+offset_right = 1152.0
+offset_bottom = 40.0
+text = "Capacity"
 
 [node name="capacity per turn" type="RichTextLabel" parent="Base game/Cycle/Capacity"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
-offset_left = 757.0
-offset_top = 577.0
-offset_right = 797.0
-offset_bottom = 617.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Base game/Cycle"]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 40.0
-text = "Calories:"
+offset_left = 896.0
+offset_top = 40.0
+offset_right = 1152.0
+offset_bottom = 80.0
+text = "capacity per turn"
 
 [node name="Options" type="Control" parent="Base game"]
 editor_description = "Options menu"

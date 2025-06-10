@@ -14,7 +14,12 @@ extends Control
 @export var turns:Big
 @export var turnEnergyCost:Big
 
+#displays
 
+@export var calText:RichTextLabel
+@export var calPTText:RichTextLabel
+@export var capText:RichTextLabel
+@export var capPTText:RichTextLabel
 #system for display purposes
 
 
@@ -23,11 +28,11 @@ extends Control
 func _ready() -> void:
 	caloriesUnit.setUnit(cal)
 	capacityUnit.setUnit(cap)
-	cal[0].buy(Big.new(1,4),Big.new(3,0))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	calText.text ="calories: "+ calories.toScientific()
+	capText.text ="capacity " + capacity.toScientific()
 	
 
 
@@ -36,7 +41,20 @@ func _on_calories_value(i: int) -> void:
 	print(i)
 	print("cl")
 	#need to make condition for buying upgrade
-	capacity = capacity.subtract(capacity,cal[i].buy(capacity,Big.new(1)))
+	var t = capacity
+	
+	print("t val: " + t.toScientific())
+	t = capacity.subtract(capacity,cal[i].buy(capacity,Big.new(2)))
+	print(t.toScientific())
+	if (t.isLessThan(0)):
+		return
+	
+	capacity = capacity.subtract(capacity,cal[i].buy(capacity,Big.new(2)))
+	
+	cal[i].addLevel(Big.new(2))
+	caloriesUnit.setUnit(cal)
+	capacityUnit.setUnit(cap)
+	
 
 
 #this handles buying capacity items, consumes energy
@@ -44,7 +62,14 @@ func _on_calories_value(i: int) -> void:
 func _on_capacity_value(i: int) -> void:
 	print(i)
 	print("ca")
-
+	var t = energy.subtract(energy,cap[i].buy(energy,Big.new(1)))
+	
+	if (t.isLessThan(0)):
+		return
+	
+	energy = t
+	caloriesUnit.setUnit(cal)
+	capacityUnit.setUnit(cap)
 
 func endTurn() -> void:
 	energy = energy.subtract(energy,turnEnergyCost)

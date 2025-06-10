@@ -34,7 +34,7 @@ func setUnit(a:Array[baseUnit]):
 		if(inst.get_index() <a.size()):
 			inst.get_child(1).texture = a[y].texture
 		inst.get_child(2).text = a[y].name + " : " + a[y].level.toScientific() + '\n' + "effect: " + a[y].effect.toScientific() + '\n' + "costs: " + a[y].cost.toScientific() + " " + type
-		
+		y+=1
 	
 	
 

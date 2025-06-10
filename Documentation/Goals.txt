@@ -8,6 +8,30 @@ Currently working on base side first, and then work can be done on the adder sid
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
  a specific function is needed to be in place just in case for one being used.
 
+Here is the basic math for each step.
+for each upgrade do these steps
+get base, then add adder to it.
+then multiply summed result by multiplier scaler.
+This is the formula
+bs_1 =(bs_0 +ad) ms
+
+
+This is the formula accordingly when level is put into place
+
+(bs*(ms^level)) +(ad*level*ms^(level*(level+1)/2))
+ 
+if  level is 1
+ms*ad
+if level is 2
+ms*ad*ms +ms*ad
+if level is 3
+ms*ad*ms + ms*ad + ms*ad*ms*ms
+if level is 4
+ms*ad*ms + ms*ad + ms*ad*ms*ms + ms*ms*ms*ms*ad
+
+simplification in place
+ad*level * ms^(level(level+1)/2)
+
 mathematics are as follows for base side
 bs = base
 ms = multiplier scaler
