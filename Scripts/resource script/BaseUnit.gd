@@ -25,12 +25,12 @@ func buyUpto(export:Big,amo:Big):
 	var c:Big
 	c = c.modulo(level,amo)
 	if(c.isGreaterThan(0)):
-		buy(export,c)
-		return
-	buy(export,amo)
+		return buy(c)
+		
+	return buy(amo)
 	
 
-func buy(export:Big,amo:Big):
+func buy(amo:Big):
 	#0<= refers to buy max
 	
 	#set up a value accordingly and make sure mathematics are correct.

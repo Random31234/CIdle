@@ -211,7 +211,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 current_tab = 0
 
-[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "calText", "calPTText", "capText", "capPTText")]
+[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "upgradeAmountButton", "calText", "calPTText", "capText", "capPTText", "energyText")]
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
@@ -221,6 +221,7 @@ capacityUnit = NodePath("Capacity/Capacity scroll container/Capacity")
 calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
+upgradeAmountButton = NodePath("Buy amount")
 cal = Array[ExtResource("2_4bjm2")]([SubResource("Resource_ycyr2"), SubResource("Resource_ht734")])
 cap = Array[ExtResource("2_4bjm2")]([SubResource("Resource_28c65")])
 ene = SubResource("Resource_76n2k")
@@ -230,6 +231,7 @@ calText = NodePath("Calories/calorie amount")
 calPTText = NodePath("Calories/calories per turn")
 capText = NodePath("Capacity/capacity amount")
 capPTText = NodePath("Capacity/capacity per turn")
+energyText = NodePath("Energy system/Energy text")
 metadata/_tab_index = 0
 
 [node name="Turn button" type="Button" parent="Base game/Cycle"]
@@ -256,7 +258,7 @@ offset_right = 704.0
 offset_bottom = 184.0
 text = "Turn x calories to x energy"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Base game/Cycle/Energy system"]
+[node name="Energy text" type="RichTextLabel" parent="Base game/Cycle/Energy system"]
 modulate = Color(1, 1, 0.470588, 1)
 layout_mode = 0
 offset_left = 448.0
@@ -306,7 +308,7 @@ layout_mode = 0
 offset_top = 40.0
 offset_right = 256.0
 offset_bottom = 80.0
-text = "CPT:"
+text = "Cal per turn:"
 
 [node name="Capacity" type="Control" parent="Base game/Cycle"]
 anchors_preset = 0
@@ -347,7 +349,16 @@ offset_left = 896.0
 offset_top = 40.0
 offset_right = 1152.0
 offset_bottom = 80.0
-text = "capacity per turn"
+text = "cap per turn:"
+
+[node name="Buy amount" type="OptionButton" parent="Base game/Cycle"]
+layout_mode = 0
+offset_top = 597.0
+offset_right = 32.0
+offset_bottom = 617.0
+item_count = 1
+popup/item_0/text = "Buy 1"
+popup/item_0/id = 0
 
 [node name="Options" type="Control" parent="Base game"]
 editor_description = "Options menu"

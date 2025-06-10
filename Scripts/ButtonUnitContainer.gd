@@ -17,6 +17,8 @@ func _ready() -> void:
 #need a function to set up the children, and then another function to have them ready
 
 
+#Note, put in second variable for determining the costs of something.
+
 func setUnit(a:Array[baseUnit]):
 	
 	#delete all children first
@@ -33,7 +35,7 @@ func setUnit(a:Array[baseUnit]):
 		print(str(inst.get_index()) + ": value of instantiated index")
 		if(inst.get_index() <a.size()):
 			inst.get_child(1).texture = a[y].texture
-		inst.get_child(2).text = a[y].name + " : " + a[y].level.toScientific() + '\n' + "effect: " + a[y].effect.toScientific() + '\n' + "costs: " + a[y].cost.toScientific() + " " + type
+		inst.get_child(2).text = a[y].name + " : " + a[y].level.toScientific() + '\n' + "effect: " + a[y].effect.toScientific() + '\n' + "costs: " + a[y].buy() + " " + type
 		y+=1
 	
 	
