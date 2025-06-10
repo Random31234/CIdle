@@ -49,7 +49,7 @@ func _on_calories_value(i: int) -> void:
 	if (t.isLessThan(0)):
 		return
 	
-	capacity = capacity.subtract(capacity,cal[i].buy(capacity,Big.new(2)))
+	capacity = t
 	
 	cal[i].addLevel(Big.new(2))
 	caloriesUnit.setUnit(cal)

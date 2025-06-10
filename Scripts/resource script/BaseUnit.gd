@@ -75,7 +75,11 @@ func buy(export:Big,amo:Big):
 	#otherwise if the multiply scaler is above or less than 1
 	b = b.divide(b.multiply(base,b.subtract(b.power(csm,b.add(amo,1)),1)),b.subtract(csm,1))
 	if(csa.isGreaterThan(0)):
-		a = a.multiply(a.divide(a.multiply(csa,csm),a.power(a.subtract(csm,Big.new(1)),Big.new(2))),a.subtract(a.power(csm,a.add(amo,Big.new(1))),a.subtract(Big.new(1),a.multiply(a.add(amo,Big.new(1)),a.subtract(csm,Big.new(1))))))
+		var h = Big.new(1,0)
+		var d = Big.new(1,0)
+		h = amo.multiply(amo,csa)
+		d = amo.power(csm,amo.divide(amo.multiply(amo,amo.add(amo,1)),2))
+		a = a.multiply(h,d)
 	b = b.add(a,b)
 	
 	
