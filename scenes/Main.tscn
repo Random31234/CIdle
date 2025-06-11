@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=41 format=3 uid="uid://ircy7bd8ydme"]
 
 [ext_resource type="Script" path="res://Scripts/mainCycle.gd" id="1_0c5bb"]
 [ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
@@ -15,11 +15,16 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_0ex3l"]
 script = ExtResource("3_2qkvh")
 mantissa = 5.0
-exponent = 2
+exponent = 765
 
 [sub_resource type="Resource" id="Resource_lbdo5"]
 script = ExtResource("3_2qkvh")
 mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_0g85k"]
+script = ExtResource("3_2qkvh")
+mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_yfq3s"]
@@ -221,6 +226,7 @@ capacityUnit = NodePath("Capacity/Capacity scroll container/Capacity")
 calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
+buyAmount = SubResource("Resource_0g85k")
 upgradeAmountButton = NodePath("Buy amount")
 cal = Array[ExtResource("2_4bjm2")]([SubResource("Resource_ycyr2"), SubResource("Resource_ht734")])
 cap = Array[ExtResource("2_4bjm2")]([SubResource("Resource_28c65")])
@@ -353,12 +359,20 @@ text = "cap per turn:"
 
 [node name="Buy amount" type="OptionButton" parent="Base game/Cycle"]
 layout_mode = 0
-offset_top = 597.0
-offset_right = 32.0
+offset_top = 585.0
+offset_right = 144.0
 offset_bottom = 617.0
-item_count = 1
+item_count = 5
 popup/item_0/text = "Buy 1"
 popup/item_0/id = 0
+popup/item_1/text = "Buy 5"
+popup/item_1/id = 1
+popup/item_2/text = "Buy 10"
+popup/item_2/id = 2
+popup/item_3/text = "Buy 25"
+popup/item_3/id = 3
+popup/item_4/text = "Buy 50"
+popup/item_4/id = 4
 
 [node name="Options" type="Control" parent="Base game"]
 editor_description = "Options menu"
@@ -369,3 +383,4 @@ metadata/_tab_index = 1
 [connection signal="button_down" from="Base game/Cycle/Turn button" to="Base game/Cycle" method="endTurn"]
 [connection signal="Value" from="Base game/Cycle/Calories/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
 [connection signal="Value" from="Base game/Cycle/Capacity/Capacity scroll container/Capacity" to="Base game/Cycle" method="_on_capacity_value"]
+[connection signal="item_selected" from="Base game/Cycle/Buy amount" to="Base game/Cycle" method="setUnits"]

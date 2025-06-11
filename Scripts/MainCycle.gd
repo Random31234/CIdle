@@ -36,9 +36,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	caloriesUnit.setUnit(cal)
-	capacityUnit.setUnit(cap)
 	buyAmount = Big.new(1,0)
+	caloriesUnit.setUnit(cal,buyAmount)
+	capacityUnit.setUnit(cap,buyAmount)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -55,17 +56,15 @@ func _on_calories_value(i: int) -> void:
 	var t = capacity
 	
 	print("t val: " + t.toScientific())
-	t = capacity.subtract(capacity,cal[i].buy(Big.new(2)))
+	t = capacity.subtract(capacity,cal[i].buy(buyAmount))
 	print(t.toScientific())
 	if (t.isLessThan(0)):
 		return
 	
 	capacity = t
 	
-	cal[i].addLevel(Big.new(2))
-	caloriesUnit.setUnit(cal)
-	capacityUnit.setUnit(cap)
-	
+	cal[i].addLevel(buyAmount)
+	setUnits()
 
 
 #this handles buying capacity items, consumes energy
@@ -73,18 +72,18 @@ func _on_calories_value(i: int) -> void:
 func _on_capacity_value(i: int) -> void:
 	print(i)
 	print("ca")
-	var t = energy.subtract(energy,cap[i].buy(Big.new(1)))
+	var t = energy.subtract(energy,cap[i].buy(buyAmount))
 	
 	if (t.isLessThan(0)):
 		return
 	
 	energy = t
-	caloriesUnit.setUnit(cal)
-	capacityUnit.setUnit(cap)
+	cap[i].addLevel(buyAmount)
+	setUnits()
 
 
 #system to update values accordingly and set buy amounts
-func setUnits():
+func setUnits(i = 1):
 	var g = Big.new(1,0)
 	
 	if (upgradeAmountButton.selected >=1 && upgradeAmountButton.selected < 3):
@@ -93,8 +92,10 @@ func setUnits():
 		g = g.multiply(25, g.subtract(upgradeAmountButton.selected,2))
 	if(upgradeAmountButton.selected >= 5):
 		g = g.power(Big.new(10),upgradeAmountButton.selected -3)
-	caloriesUnit.setUnit(cal)
-	capacityUnit.setUnit(cap)
+	buyAmount = g
+	print("Amount set as buyable")
+	caloriesUnit.setUnit(cal,buyAmount)
+	capacityUnit.setUnit(cap,buyAmount)
 	
 
 
