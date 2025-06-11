@@ -4,7 +4,8 @@ The next step is to work on the mathematics behind the upgrades
 The mathematics is incomplete, buy amount is not properly set, finish that then can work on next step.
 Currently working on base side first, and then work can be done on the adder side.
 
-The mathematics are technically done now, just need to now account for effects and have them apply every turn.
+The mathematics are technically done now, just need to now account for effects and have them apply every turn and other end of turn effects
+This should also include some form of reset accordingly for everything.
 
 
 

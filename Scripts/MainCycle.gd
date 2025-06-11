@@ -102,7 +102,7 @@ func setUnits(i = 1):
 
 func endTurn() -> void:
 	
-	#calculation that is done.
+	#calculation that is done at the end of turn to determine how many upgrades are bought. 
 	
 	
 	turns.add(turns,1)
