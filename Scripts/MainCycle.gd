@@ -1,4 +1,5 @@
 extends Control
+class_name cycle
 #button units
 @export var caloriesUnit:ButtonUnitManager
 @export var capacityUnit:ButtonUnitManager
@@ -105,3 +106,6 @@ func endTurn() -> void:
 	
 	
 	turns.add(turns,1)
+
+func resetCyle():
+	pass
