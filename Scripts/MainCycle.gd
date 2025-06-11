@@ -101,4 +101,7 @@ func setUnits(i = 1):
 
 func endTurn() -> void:
 	
+	#calculation that is done.
+	
+	
 	turns.add(turns,1)

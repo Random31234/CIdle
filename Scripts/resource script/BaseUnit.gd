@@ -1,6 +1,13 @@
 extends Resource
 
 class_name baseUnit
+#original values
+@export var ogPrice:Big
+@export var ogEffect:Big
+@export var ogCostScaleMult:Big
+@export var ogCostScaleAdd:Big
+
+
 #cost and effect base
 @export var price:Big
 @export var effect:Big
@@ -97,3 +104,18 @@ func addLevel(ad:Big):
 	d = costScaleMult.power(costScaleMult,level.divide(level.multiply(level,level.add(1,level)),2))
 	cost = h.add(h,a.multiply(a,d))
 	print(cost)
+
+func resetLevels():
+	level = Big.new(0,0)
+	addLevel(Big.new(0,0))
+	
+
+func resetToOG():
+	costScaleAdd = ogCostScaleAdd
+	costScaleMult = ogCostScaleMult
+	effect = ogEffect
+	price = ogPrice
+
+func fullReset():
+	resetToOG()
+	resetLevels()
