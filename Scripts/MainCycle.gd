@@ -97,7 +97,7 @@ func setUnits(i = 1):
 	print("Amount set as buyable")
 	caloriesUnit.setUnit(cal,buyAmount)
 	capacityUnit.setUnit(cap,buyAmount)
-	
+	#put in an update for capt/calt text
 
 
 func endTurn() -> void:
