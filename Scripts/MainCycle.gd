@@ -59,7 +59,8 @@ func _on_calories_value(i: int) -> void:
 	print("t val: " + t.toScientific())
 	t = capacity.subtract(capacity,cal[i].buy(buyAmount))
 	print(t.toScientific())
-	if (t.isLessThan(0)):
+	print(t.isLessThan(0))
+	if(t.mantissa <0):
 		return
 	
 	capacity = t
@@ -69,13 +70,14 @@ func _on_calories_value(i: int) -> void:
 
 
 #this handles buying capacity items, consumes energy
+#patch this buygged problem.
 
 func _on_capacity_value(i: int) -> void:
 	print(i)
 	print("ca")
 	var t = energy.subtract(energy,cap[i].buy(buyAmount))
 	
-	if (t.isLessThan(0)):
+	if(t.mantissa <0):
 		return
 	
 	energy = t
