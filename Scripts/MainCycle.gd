@@ -101,10 +101,21 @@ func setUnits(i = 1):
 
 
 func endTurn() -> void:
-	
+	var i = Big.new(0,0)
 	#calculation that is done at the end of turn to determine how the upgrades apply all together.
-	
-	
+	for x in cal:
+		var h = Big.new(1,0)
+		var m = Big.new(1,0)
+		h = h.multiply(x.level,x.effect)
+		i = i.add(i,h)
+	#then do multiplications and add accordingly.
+	calories = calories.add(calories,i)
+	for x in cap:
+		var h = Big.new(1,0)
+		var m = Big.new(1,0)
+		h = h.multiply(x.level,x.effect)
+		i = i.add(i,h)
+	capacity = calories.add(capacity,i)
 	turns.add(turns,1)
 
 func resetCyle():
