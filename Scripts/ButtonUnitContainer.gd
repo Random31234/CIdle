@@ -23,7 +23,6 @@ func setUnit(a:Array[baseUnit],j:Big):
 	
 	#delete all children first
 	for child in get_children():
-		child.queue_free()
 		child.free()
 	
 	var y = 0
@@ -31,7 +30,7 @@ func setUnit(a:Array[baseUnit],j:Big):
 	for z in a:
 		var inst = buttonUnit.instantiate()
 		add_child(inst)
-		inst.get_child(0).connect("button_down",valuePass.bind(inst.get_index()))
+		inst.get_child(0).connect("button_down",valuePass.bind(inst.get_index()), CONNECT_DEFERRED)
 		print(str(inst.get_index()) + ": value of instantiated index")
 		if(inst.get_index() <a.size()):
 			inst.get_child(1).texture = a[y].texture

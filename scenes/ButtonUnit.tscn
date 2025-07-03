@@ -33,3 +33,5 @@ text = "Name
 cost:
 effect:"
 scroll_active = false
+
+[connection signal="button_down" from="Button" to="Button" method="disable"]
