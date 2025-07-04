@@ -11,7 +11,9 @@ The mathematics are technically done now, just need to now account for effects a
 
 Discovered bug on upgrade buying system, patched up, resolved native bug of big system, will need to comb over later on. Regardless patch works
 
-There is a crashing bug that happens if the button is clicked to quickly.
+There is a crashing bug that happens if the button is clicked to quickly. Resolved
+
+Now work on energy system to be bought and consumed by turns
 
 A reset function needs to be added.
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=57 format=3 uid="uid://ircy7bd8ydme"]
 
 [ext_resource type="Script" path="res://Scripts/mainCycle.gd" id="1_0c5bb"]
 [ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
@@ -249,6 +249,26 @@ script = ExtResource("3_2qkvh")
 mantissa = 0.0
 exponent = 0
 
+[sub_resource type="Resource" id="Resource_pp75m"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_71xxh"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_sywtf"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_1817c"]
+script = ExtResource("3_2qkvh")
+mantissa = 0.0
+exponent = 0
+
 [sub_resource type="Resource" id="Resource_ixnat"]
 script = ExtResource("3_2qkvh")
 mantissa = 0.0
@@ -256,13 +276,17 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_76n2k"]
 script = ExtResource("2_4bjm2")
+ogPrice = SubResource("Resource_1817c")
+ogEffect = SubResource("Resource_sywtf")
+ogCostScaleMult = SubResource("Resource_71xxh")
+ogCostScaleAdd = SubResource("Resource_pp75m")
 price = SubResource("Resource_ixnat")
 effect = SubResource("Resource_tn6s8")
 costScaleMult = SubResource("Resource_leyu1")
 costScaleAdd = SubResource("Resource_hplmi")
 cost = SubResource("Resource_1brnk")
 level = SubResource("Resource_i7d2w")
-name = ""
+name = "Energy"
 
 [sub_resource type="Resource" id="Resource_8ykva"]
 script = ExtResource("3_2qkvh")
@@ -334,7 +358,7 @@ offset_left = 448.0
 offset_top = 152.0
 offset_right = 704.0
 offset_bottom = 184.0
-text = "Turn x calories to x energy"
+text = "Convert calories to energy"
 
 [node name="Energy text" type="RichTextLabel" parent="Base game/Cycle/Energy system"]
 modulate = Color(1, 1, 0.470588, 1)
@@ -431,9 +455,9 @@ text = "cap per turn:"
 
 [node name="Buy amount" type="OptionButton" parent="Base game/Cycle"]
 layout_mode = 0
-offset_top = 585.0
-offset_right = 144.0
-offset_bottom = 617.0
+offset_left = 492.0
+offset_right = 636.0
+offset_bottom = 32.0
 item_count = 7
 popup/item_0/text = "Buy 1"
 popup/item_0/id = 0

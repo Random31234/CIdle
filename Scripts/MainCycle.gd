@@ -38,8 +38,7 @@ class_name cycle
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	buyAmount = Big.new(1,0)
-	caloriesUnit.setUnit(cal,buyAmount)
-	capacityUnit.setUnit(cap,buyAmount)
+	setUnits()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -100,7 +99,18 @@ func setUnits(i = 1):
 	caloriesUnit.setUnit(cal,buyAmount)
 	capacityUnit.setUnit(cap,buyAmount)
 	#put in an update for capt/calt text
+	
+	#put in update for energy values.
+	updateEnergy()
 
+func updateEnergy():
+	energyText.text = "Energy amount: " + energy.toScientific() +'\n' + "Calories cost: " + ene.buy(buyAmount).toScientific() + '\n' + "buy amount: " + buyAmount.toScientific()
+
+#next to work on is energy buying.
+func buyEnergy():
+	
+	
+	pass
 
 func endTurn() -> void:
 	var i = Big.new(0,0)
@@ -119,6 +129,10 @@ func endTurn() -> void:
 		i = i.add(i,h)
 	capacity = calories.add(capacity,i)
 	turns.add(turns,1)
+	energy = energy.subtract(energy,turnEnergyCost)
 
 func resetCyle():
+	pass
+
+func addFactors():
 	pass
