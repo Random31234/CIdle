@@ -50,8 +50,6 @@ func _process(delta: float) -> void:
 
 #this handles buying calories items, consumes capacity
 func _on_calories_value(i: int) -> void:
-	print(i)
-	print("cl")
 	#need to make condition for buying upgrade
 	var t = capacity
 	
@@ -72,8 +70,6 @@ func _on_calories_value(i: int) -> void:
 #patch this buygged problem.
 
 func _on_capacity_value(i: int) -> void:
-	print(i)
-	print("ca")
 	var t = energy.subtract(energy,cap[i].buy(buyAmount))
 	
 	if(t.mantissa <0):

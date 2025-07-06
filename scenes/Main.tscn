@@ -223,6 +223,8 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
+[node name="Cyclemanager" type="Node" parent="Base game"]
+
 [connection signal="button_down" from="Base game/Cycle/Turn button" to="Base game/Cycle" method="endTurn"]
 [connection signal="button_down" from="Base game/Cycle/Energy system/Buy energy button" to="Base game/Cycle" method="buyEnergy"]
 [connection signal="Value" from="Base game/Cycle/Calories/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
