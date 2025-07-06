@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="baseUnit" load_steps=14 format=3 uid="uid://cymx1j3yvavpu"]
+
+[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_xeu6k"]
+[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_kbqp4"]
+[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_vplad"]
+
+[sub_resource type="Resource" id="Resource_yfq3s"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_3c1jk"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_fvr7p"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_fpq42"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_r2tr1"]
+script = ExtResource("1_xeu6k")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_o6erg"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_4owqt"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_6gv3s"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_dvkf7"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_l1333"]
+script = ExtResource("1_xeu6k")
+mantissa = 1.0
+exponent = 0
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_kbqp4")
+ogPrice = SubResource("Resource_dvkf7")
+ogEffect = SubResource("Resource_6gv3s")
+ogCostScaleMult = SubResource("Resource_4owqt")
+ogCostScaleAdd = SubResource("Resource_o6erg")
+price = SubResource("Resource_l1333")
+effect = SubResource("Resource_fpq42")
+costScaleMult = SubResource("Resource_fvr7p")
+costScaleAdd = SubResource("Resource_3c1jk")
+cost = SubResource("Resource_yfq3s")
+level = SubResource("Resource_r2tr1")
+name = "apple"
+texture = ExtResource("3_vplad")

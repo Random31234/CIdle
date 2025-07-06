@@ -1,7 +1,70 @@
-[gd_resource type="Resource" script_class="baseUnit" load_steps=2 format=3 uid="uid://cft7wueu5mqwy"]
+[gd_resource type="Resource" script_class="baseUnit" load_steps=14 format=3 uid="uid://deofjkros8k1w"]
 
-[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="1_60k8x"]
+[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_158ri"]
+[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_vojbw"]
+[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_q7q27"]
+
+[sub_resource type="Resource" id="Resource_i5ixb"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_pukxx"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_bujgi"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_nn0nk"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_a3uw7"]
+script = ExtResource("1_158ri")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_jiq4h"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_ndbb7"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_vhqgt"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_oiq35"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_7e6ye"]
+script = ExtResource("1_158ri")
+mantissa = 1.0
+exponent = 0
 
 [resource]
-script = ExtResource("1_60k8x")
-name = ""
+script = ExtResource("2_vojbw")
+ogPrice = SubResource("Resource_oiq35")
+ogEffect = SubResource("Resource_vhqgt")
+ogCostScaleMult = SubResource("Resource_ndbb7")
+ogCostScaleAdd = SubResource("Resource_jiq4h")
+price = SubResource("Resource_7e6ye")
+effect = SubResource("Resource_nn0nk")
+costScaleMult = SubResource("Resource_bujgi")
+costScaleAdd = SubResource("Resource_pukxx")
+cost = SubResource("Resource_i5ixb")
+level = SubResource("Resource_a3uw7")
+name = "Stretch"
+texture = ExtResource("3_q7q27")
