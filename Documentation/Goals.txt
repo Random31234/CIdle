@@ -13,10 +13,11 @@ Discovered bug on upgrade buying system, patched up, resolved native bug of big 
 
 There is a crashing bug that happens if the button is clicked to quickly. Resolved
 
-Now work on energy system to be bought and consumed by turns
+Now work on energy system to be bought and consumed by turns.
 
-A reset function needs to be added.
+Energy is now buyable and consumed by turns, values do need to be played around with, but definitely works now.
 
+The final pieces are almost in place, now the reset loop and additional factors to be applied afterwards has to be done to get working.
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
  a specific function is needed to be in place just in case for one being used.
 
