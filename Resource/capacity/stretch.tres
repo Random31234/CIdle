@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="baseUnit" load_steps=14 format=3 uid="uid://deofjkros8k1w"]
 
-[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_158ri"]
+[ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="1_158ri"]
 [ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_vojbw"]
 [ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_q7q27"]
 

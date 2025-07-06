@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="baseUnit" load_steps=13 format=3 uid="uid://c88ne4fkxy7hp"]
 
-[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_m2vde"]
+[ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="1_m2vde"]
 [ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_4om1a"]
 
 [sub_resource type="Resource" id="Resource_1brnk"]
