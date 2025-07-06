@@ -85,7 +85,7 @@ func _on_capacity_value(i: int) -> void:
 
 
 #system to update values accordingly and set buy amounts
-func setUnits(i = 1):
+func setUnits():
 	var g = Big.new(1,0)
 	
 	if (upgradeAmountButton.selected >=1 && upgradeAmountButton.selected < 3):
@@ -109,8 +109,13 @@ func updateEnergy():
 #next to work on is energy buying.
 func buyEnergy():
 	
-	
-	pass
+	var t = calories.subtract(calories,ene.buy(buyAmount))
+	if (t.mantissa <0):
+		return
+	calories = t
+	energy = energy.add(buyAmount,energy)
+	ene.addLevel(buyAmount)
+	setUnits()
 
 func endTurn() -> void:
 	var i = Big.new(0,0)
@@ -130,6 +135,7 @@ func endTurn() -> void:
 	capacity = calories.add(capacity,i)
 	turns.add(turns,1)
 	energy = energy.subtract(energy,turnEnergyCost)
+	setUnits()
 
 func resetCyle():
 	pass

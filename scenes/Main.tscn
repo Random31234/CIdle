@@ -482,6 +482,7 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [connection signal="button_down" from="Base game/Cycle/Turn button" to="Base game/Cycle" method="endTurn"]
+[connection signal="button_down" from="Base game/Cycle/Energy system/Buy energy button" to="Base game/Cycle" method="buyEnergy"]
 [connection signal="Value" from="Base game/Cycle/Calories/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
 [connection signal="Value" from="Base game/Cycle/Capacity/Capacity scroll container/Capacity" to="Base game/Cycle" method="_on_capacity_value"]
 [connection signal="item_selected" from="Base game/Cycle/Buy amount" to="Base game/Cycle" method="setUnits"]
