@@ -1,62 +1,62 @@
 [gd_resource type="Resource" script_class="baseUnit" load_steps=14 format=3 uid="uid://cns5k57461mmd"]
 
-[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_5qcfm"]
-[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_wxhlt"]
-[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_ip77u"]
+[ext_resource type="Script" path="res://Scripts/bigNumber.gd" id="1_pw4k3"]
+[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_2vt1l"]
+[ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_runtm"]
 
 [sub_resource type="Resource" id="Resource_37ed6"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_3igvg"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 0.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_pk8ya"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.2
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_an64f"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_43xc8"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 0.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_82tws"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_3cjxr"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.2
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_rop4p"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_d00j0"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_xquw2"]
-script = ExtResource("1_5qcfm")
+script = ExtResource("1_pw4k3")
 mantissa = 1.0
 exponent = 0
 
 [resource]
 resource_local_to_scene = true
-script = ExtResource("2_wxhlt")
+script = ExtResource("2_2vt1l")
 ogPrice = SubResource("Resource_d00j0")
 ogEffect = SubResource("Resource_rop4p")
 ogCostScaleMult = SubResource("Resource_3cjxr")
@@ -68,4 +68,4 @@ costScaleAdd = SubResource("Resource_3igvg")
 cost = SubResource("Resource_37ed6")
 level = SubResource("Resource_43xc8")
 name = "bannana"
-texture = ExtResource("3_ip77u")
+texture = ExtResource("3_runtm")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ircy7bd8ydme"]
+[gd_scene load_steps=17 format=3 uid="uid://ircy7bd8ydme"]
 
 [ext_resource type="Script" path="res://Scripts/mainCycle.gd" id="1_0c5bb"]
 [ext_resource type="PackedScene" uid="uid://delsb0b7je0k4" path="res://scenes/ButtonUnit.tscn" id="1_g87k8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cns5k57461mmd" path="res://Resource/Calories/Bannana.tres" id="5_2wcdr"]
 [ext_resource type="Resource" uid="uid://deofjkros8k1w" path="res://Resource/capacity/Stretch.tres" id="6_ssl8l"]
 [ext_resource type="Resource" uid="uid://c88ne4fkxy7hp" path="res://Resource/energy/Energy.tres" id="7_f4leg"]
+[ext_resource type="Script" path="res://scenes/cyclemanager.gd" id="10_mwcfl"]
 
 [sub_resource type="Resource" id="Resource_kony0"]
 script = ExtResource("3_2qkvh")
@@ -224,6 +225,9 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Cyclemanager" type="Node" parent="Base game"]
+script = ExtResource("10_mwcfl")
+cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])
+cap = Array[ExtResource("2_4bjm2")]([ExtResource("6_ssl8l")])
 
 [connection signal="button_down" from="Base game/Cycle/Turn button" to="Base game/Cycle" method="endTurn"]
 [connection signal="button_down" from="Base game/Cycle/Energy system/Buy energy button" to="Base game/Cycle" method="buyEnergy"]
