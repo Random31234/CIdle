@@ -3,6 +3,8 @@ class_name cycle
 #button units
 @export var caloriesUnit:ButtonUnitManager
 @export var capacityUnit:ButtonUnitManager
+#manager
+@export var cyclem:cyclemanager
 #variables
 @export var calories:Big
 @export var capacity:Big
@@ -134,7 +136,4 @@ func endTurn() -> void:
 	setUnits()
 
 func resetCyle():
-	pass
-
-func addFactors():
 	pass

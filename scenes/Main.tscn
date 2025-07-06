@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://cns5k57461mmd" path="res://Resource/Calories/Bannana.tres" id="5_2wcdr"]
 [ext_resource type="Resource" uid="uid://deofjkros8k1w" path="res://Resource/capacity/Stretch.tres" id="6_ssl8l"]
 [ext_resource type="Resource" uid="uid://c88ne4fkxy7hp" path="res://Resource/energy/Energy.tres" id="7_f4leg"]
-[ext_resource type="Script" path="res://scenes/cyclemanager.gd" id="10_mwcfl"]
+[ext_resource type="Script" path="res://Scripts/cyclemanager.gd" id="10_mwcfl"]
 
 [sub_resource type="Resource" id="Resource_kony0"]
 script = ExtResource("3_2qkvh")
@@ -55,13 +55,14 @@ offset_right = 1152.0
 offset_bottom = 648.0
 current_tab = 0
 
-[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "upgradeAmountButton", "calText", "calPTText", "capText", "capPTText", "energyText")]
+[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "cyclem", "upgradeAmountButton", "calText", "calPTText", "capText", "capPTText", "energyText")]
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
 script = ExtResource("1_0c5bb")
 caloriesUnit = NodePath("Calories/Calories Scroll Container/Calories")
 capacityUnit = NodePath("Capacity/Capacity scroll container/Capacity")
+cyclem = NodePath("../../Cyclemanager")
 calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
@@ -224,7 +225,7 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="Cyclemanager" type="Node" parent="Base game"]
+[node name="Cyclemanager" type="Node" parent="."]
 script = ExtResource("10_mwcfl")
 cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])
 cap = Array[ExtResource("2_4bjm2")]([ExtResource("6_ssl8l")])
