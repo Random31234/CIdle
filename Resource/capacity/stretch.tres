@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="baseUnit" load_steps=2 format=3 uid="uid://cft7wueu5mqwy"]
+
+[ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="1_60k8x"]
+
+[resource]
+script = ExtResource("1_60k8x")
+name = ""
