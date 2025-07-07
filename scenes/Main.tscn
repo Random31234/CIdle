@@ -21,7 +21,7 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_0ex3l"]
 script = ExtResource("3_2qkvh")
 mantissa = 7.0
-exponent = 1
+exponent = 3
 
 [sub_resource type="Resource" id="Resource_lbdo5"]
 script = ExtResource("3_2qkvh")

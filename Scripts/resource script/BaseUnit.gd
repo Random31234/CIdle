@@ -86,8 +86,8 @@ func buy(amo:Big):
 		var h = Big.new(1,0)
 		
 		var d = Big.new(1,0)
-		h = amo.multiply(amo,csa)
-		d = amo.power(csm,amo.divide(amo.multiply(amo,amo.add(amo,1)),2))
+		h = amo.multiply(amo.divide(amo,2),csa)
+		d = d.multiply(d.divide(1,d.subtract(csm,1)),d.subtract(d.multiply(d.divide(1,d.subtract(csm,1)),d.subtract(d.power(csm,amo),1)),amo))
 		a = a.multiply(h,d)
 	b = b.add(a,b)
 	
