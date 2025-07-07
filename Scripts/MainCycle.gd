@@ -5,6 +5,8 @@ class_name cycle
 @export var capacityUnit:ButtonUnitManager
 #manager
 @export var cyclem:cyclemanager
+#layer1
+@export var p:layer1
 #variables
 @export var calories:Big
 @export var capacity:Big
@@ -136,4 +138,7 @@ func endTurn() -> void:
 	setUnits()
 
 func resetCyle():
-	pass
+	
+	
+	
+	cyclem.reset()
