@@ -82,7 +82,9 @@ func buy(amo:Big):
 	#otherwise if the multiply scaler is above or less than 1
 	b = b.divide(b.multiply(base,b.subtract(b.power(csm,b.add(amo,1)),1)),b.subtract(csm,1))
 	if(csa.isGreaterThan(0)):
+		#this part has a flaw.
 		var h = Big.new(1,0)
+		
 		var d = Big.new(1,0)
 		h = amo.multiply(amo,csa)
 		d = amo.power(csm,amo.divide(amo.multiply(amo,amo.add(amo,1)),2))
@@ -99,10 +101,13 @@ func addLevel(ad:Big):
 	var h = Big.new(1,0)
 	h= cost.multiply(price,costScaleMult.power(costScaleMult,level))
 	var a = Big.new(1,0)
-	a = cost.multiply(costScaleAdd,level)
+	a = cost.multiply(costScaleAdd,a)
 	var d = Big.new(1,0)
-	d = costScaleMult.power(costScaleMult,level.divide(level.multiply(level,level.add(1,level)),2))
-	cost = h.add(h,a.multiply(a,d))
+	d = costScaleMult.multiply(costScaleMult,costScaleMult.divide(costScaleMult.subtract(1,costScaleMult.power(costScaleMult,level)),costScaleMult.subtract(1,costScaleMult)))
+	a = a.multiply(a,d)
+	cost = h.add(h,a)
+	print(a.toScientific() + " = = = =  d ")
+	print(h.toScientific() + " = = = =  h ")
 	print(cost)
 
 func resetLevels():

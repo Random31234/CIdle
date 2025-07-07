@@ -105,6 +105,7 @@ func setUnits():
 
 func updateEnergy():
 	energyText.text = "Energy amount: " + energy.toScientific() +'\n' + "Calories cost: " + ene.buy(buyAmount).toScientific() + '\n' + "buy amount: " + buyAmount.toScientific()
+	
 
 #next to work on is energy buying.
 func buyEnergy():
@@ -136,9 +137,15 @@ func endTurn() -> void:
 	turns.add(turns,1)
 	energy = energy.subtract(energy,turnEnergyCost)
 	setUnits()
+	if energy.mantissa <0:
+		resetCyle()
 
 func resetCyle():
-	
+	p.fat = p.fat.add(p.fat,calories.divide(calories,2000))
 	
 	
 	cyclem.reset()
+
+
+func _on_buy_amount_item_selected(index: int) -> void:
+	setUnits()
