@@ -105,10 +105,12 @@ func addLevel(ad:Big):
 	var d = Big.new(1,0)
 	d = costScaleMult.multiply(costScaleMult,costScaleMult.divide(costScaleMult.subtract(1,costScaleMult.power(costScaleMult,level)),costScaleMult.subtract(1,costScaleMult)))
 	a = a.multiply(a,d)
+	if(costScaleMult.isEqualTo(1)):
+		a = costScaleAdd.multiply(costScaleAdd,level)
 	cost = h.add(h,a)
 	print(d.toScientific() + " = = = =  d")
 	print(h.toScientific() + " = = = =  h ")
-	print(cost)
+	print(cost.toScientific())
 
 func resetLevels():
 	level = Big.new(0,0)

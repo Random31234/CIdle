@@ -1,56 +1,56 @@
 [gd_resource type="Resource" script_class="baseUnit" load_steps=14 format=3 uid="uid://deofjkros8k1w"]
 
-[ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="1_158ri"]
+[ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="1_xeam8"]
 [ext_resource type="Script" path="res://Scripts/resource script/BaseUnit.gd" id="2_vojbw"]
 [ext_resource type="Texture2D" uid="uid://byrvk58ny74ve" path="res://icon.svg" id="3_q7q27"]
 
 [sub_resource type="Resource" id="Resource_i5ixb"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_pukxx"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_bujgi"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_nn0nk"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_a3uw7"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 0.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_jiq4h"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_ndbb7"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_vhqgt"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_oiq35"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_7e6ye"]
-script = ExtResource("1_158ri")
+script = ExtResource("1_xeam8")
 mantissa = 1.0
 exponent = 0
 

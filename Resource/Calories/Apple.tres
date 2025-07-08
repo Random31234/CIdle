@@ -11,7 +11,7 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_3c1jk"]
 script = ExtResource("1_xeu6k")
-mantissa = 1.0
+mantissa = 0.1
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_fvr7p"]
@@ -31,7 +31,7 @@ exponent = 0
 
 [sub_resource type="Resource" id="Resource_o6erg"]
 script = ExtResource("1_xeu6k")
-mantissa = 1.0
+mantissa = 0.1
 exponent = 0
 
 [sub_resource type="Resource" id="Resource_4owqt"]

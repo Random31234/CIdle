@@ -57,10 +57,7 @@ func _on_calories_value(i: int) -> void:
 	#need to make condition for buying upgrade
 	var t = capacity
 	
-	print("t val: " + t.toScientific())
 	t = capacity.subtract(capacity,cal[i].buy(buyAmount))
-	print(t.toScientific())
-	print(t.isLessThan(0))
 	if(t.mantissa <0):
 		return
 	
