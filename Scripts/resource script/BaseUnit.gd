@@ -84,11 +84,11 @@ func buy(amo:Big):
 	if(csa.isGreaterThan(0)):
 		#this part has a flaw.
 		var h = Big.new(1,0)
-		
+		h = h.divide(csm.subtract(csm.power(csm,csm.add(amo,2)),csm.power(csm,2)),csm.power(csm.subtract(csm, 1),2))
 		var d = Big.new(1,0)
-		h = amo.multiply(amo.divide(amo,2),csa)
-		d = d.multiply(d.divide(1,d.subtract(csm,1)),d.subtract(d.multiply(d.divide(1,d.subtract(csm,1)),d.subtract(d.power(csm,amo),1)),amo))
-		a = a.multiply(h,d)
+		d = d.divide(csm.multiply(csm,amo),csm.subtract(csm,1))
+		a = a.subtract(h,d)
+		a = a.multiply(csa, a)
 	b = b.add(a,b)
 	
 	
@@ -106,7 +106,7 @@ func addLevel(ad:Big):
 	d = costScaleMult.multiply(costScaleMult,costScaleMult.divide(costScaleMult.subtract(1,costScaleMult.power(costScaleMult,level)),costScaleMult.subtract(1,costScaleMult)))
 	a = a.multiply(a,d)
 	cost = h.add(h,a)
-	print(a.toScientific() + " = = = =  d ")
+	print(d.toScientific() + " = = = =  d")
 	print(h.toScientific() + " = = = =  h ")
 	print(cost)
 
