@@ -35,9 +35,11 @@ class_name cycle
 @export var capText:RichTextLabel
 @export var capPTText:RichTextLabel
 @export var energyText:RichTextLabel
-#system for display purposes
 
 
+#signals.
+
+signal unlock
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -150,6 +152,7 @@ func endTurn() -> void:
 	
 	if energy.isLessThan(0):
 		resetCyle()
+		emit_signal("unlock")
 
 func resetCyle():
 	p.fat = p.fat.add(p.fat,calories.divide(calories,2000))

@@ -9,6 +9,10 @@ func _ready() -> void:
 	self.set_tab_hidden(2,true)
 
 
-func unlock():
-	if ractive == true:
-		self.set_tab_hidden(2,true)
+func unlocker():
+	self.set_tab_hidden(2,!ractive)
+	
+
+func restUnlocker():
+	ractive = true
+	unlocker()

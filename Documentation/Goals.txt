@@ -27,7 +27,7 @@ First calculation is fixed, the levels now reflect actual cost appropriately, bu
 all associated problems are now fixed, 
 back to work on reset functions.
 The reset function works, now tabs need to be developed
-
+Tab is now unlockable.
 
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
