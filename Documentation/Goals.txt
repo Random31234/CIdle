@@ -26,6 +26,9 @@ Therefore, there is some calculations in need of fixing.
 First calculation is fixed, the levels now reflect actual cost appropriately, but buy max and buy amounts are not accurate.
 all associated problems are now fixed, 
 back to work on reset functions.
+The reset function works, now tabs need to be developed
+
+
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
  a specific function is needed to be in place just in case for one being used.

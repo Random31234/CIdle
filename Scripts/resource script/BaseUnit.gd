@@ -103,8 +103,9 @@ func addLevel(ad:Big):
 	var a = Big.new(1,0)
 	a = cost.multiply(costScaleAdd,a)
 	var d = Big.new(1,0)
-	d = costScaleMult.multiply(costScaleMult,costScaleMult.divide(costScaleMult.subtract(1,costScaleMult.power(costScaleMult,level)),costScaleMult.subtract(1,costScaleMult)))
-	a = a.multiply(a,d)
+	if(costScaleAdd.isEqualTo(1) == false):
+		d = costScaleMult.multiply(costScaleMult,costScaleMult.divide(costScaleMult.subtract(1,costScaleMult.power(costScaleMult,level)),costScaleMult.subtract(1,costScaleMult)))
+		a = a.multiply(a,d)
 	if(costScaleMult.isEqualTo(1)):
 		a = costScaleAdd.multiply(costScaleAdd,level)
 	cost = h.add(h,a)
@@ -114,7 +115,7 @@ func addLevel(ad:Big):
 
 func resetLevels():
 	level = Big.new(0,0)
-	addLevel(Big.new(0,0))
+	
 	
 
 func resetToOG():
@@ -122,6 +123,7 @@ func resetToOG():
 	costScaleMult = ogCostScaleMult
 	effect = ogEffect
 	price = ogPrice
+	cost = price
 
 func fullReset():
 	resetToOG()

@@ -11,9 +11,10 @@ class_name cyclemanager
 
 func reset():
 	for x in cal:
-		x.resetToOG()
+		x.fullReset()
 	for x in cap:
-		x.resetToOG()
+		x.fullReset()
+	
 
 
 func factor():

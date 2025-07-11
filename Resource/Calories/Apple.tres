@@ -55,7 +55,6 @@ mantissa = 1.0
 exponent = 0
 
 [resource]
-resource_local_to_scene = true
 script = ExtResource("2_kbqp4")
 ogPrice = SubResource("Resource_dvkf7")
 ogEffect = SubResource("Resource_6gv3s")

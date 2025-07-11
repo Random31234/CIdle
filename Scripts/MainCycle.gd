@@ -114,27 +114,41 @@ func buyEnergy():
 	energy = energy.add(buyAmount,energy)
 	ene.addLevel(buyAmount)
 	setUnits()
+	print( "cost as in the cycle is!: " + cyclem.cal[0].cost.toScientific())
 
 func endTurn() -> void:
 	var i = Big.new(0,0)
+	var c = Big.new(0,0)
+	var m = Big.new(1,0)
 	#calculation that is done at the end of turn to determine how the upgrades apply all together.
 	for x in cal:
 		var h = Big.new(1,0)
-		var m = Big.new(1,0)
+		c = c.add(x.level,c)
+		
+		
 		h = h.multiply(x.level,x.effect)
 		i = i.add(i,h)
 	#then do multiplications and add accordingly.
+	
+	#first factor is to do individual levels, and then combined levels
+	
+	
 	calories = calories.add(calories,i)
+	#reset functions for c, i and m
+	c = Big.new(0,0)
+	i = Big.new(0,0)
+	m = Big.new(1,0)
 	for x in cap:
 		var h = Big.new(1,0)
-		var m = Big.new(1,0)
+		c = c.add(x.level,c)
 		h = h.multiply(x.level,x.effect)
 		i = i.add(i,h)
 	capacity = calories.add(capacity,i)
 	turns.add(turns,1)
 	energy = energy.subtract(energy,turnEnergyCost)
 	setUnits()
-	if energy.mantissa <0:
+	
+	if energy.isLessThan(0):
 		resetCyle()
 
 func resetCyle():
@@ -142,6 +156,11 @@ func resetCyle():
 	
 	
 	cyclem.reset()
+	setUnits()
+	calories = Big.new(0,0)
+	energy = cyclem.energy
+	capacity = cyclem.capacity
+	updateEnergy()
 
 
 func _on_buy_amount_item_selected(index: int) -> void:
