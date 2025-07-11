@@ -21,7 +21,7 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_0ex3l"]
 script = ExtResource("3_2qkvh")
 mantissa = 2.0
-exponent = 122
+exponent = 1
 
 [sub_resource type="Resource" id="Resource_lbdo5"]
 script = ExtResource("3_2qkvh")
@@ -99,9 +99,6 @@ calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
 buyAmount = SubResource("Resource_0g85k")
-calC = 4
-capC = 4
-calI = 4
 capI = 4
 upgradeAmountButton = NodePath("Buy amount")
 cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])

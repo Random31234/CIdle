@@ -29,6 +29,9 @@ back to work on reset functions.
 The reset function works, now tabs need to be developed
 Tab is now unlockable.
 
+Game is now set on the cycle side, only needs a manual reset system in case energy counts get massively large,could use a function
+to adjust for that as well as a function for multiple turns being taken at once. 
+
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
  a specific function is needed to be in place just in case for one being used.
