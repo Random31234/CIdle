@@ -21,7 +21,7 @@ exponent = 0
 [sub_resource type="Resource" id="Resource_0ex3l"]
 script = ExtResource("3_2qkvh")
 mantissa = 2.0
-exponent = 1
+exponent = 122
 
 [sub_resource type="Resource" id="Resource_lbdo5"]
 script = ExtResource("3_2qkvh")
@@ -99,6 +99,10 @@ calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
 buyAmount = SubResource("Resource_0g85k")
+calC = 4
+capC = 4
+calI = 4
+capI = 4
 upgradeAmountButton = NodePath("Buy amount")
 cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])
 cap = Array[ExtResource("2_4bjm2")]([ExtResource("6_ssl8l")])
@@ -184,8 +188,8 @@ text = "Calories:"
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
 offset_top = 40.0
-offset_right = 256.0
-offset_bottom = 80.0
+offset_right = 382.0
+offset_bottom = 154.0
 text = "Cal per turn:"
 
 [node name="Capacity" type="Control" parent="Base game/Cycle"]
@@ -223,10 +227,10 @@ text = "Capacity"
 [node name="capacity per turn" type="RichTextLabel" parent="Base game/Cycle/Capacity"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 0
-offset_left = 896.0
+offset_left = 768.0
 offset_top = 40.0
 offset_right = 1152.0
-offset_bottom = 80.0
+offset_bottom = 149.0
 text = "cap per turn:"
 
 [node name="Buy amount" type="OptionButton" parent="Base game/Cycle"]

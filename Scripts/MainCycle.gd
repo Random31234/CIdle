@@ -15,7 +15,11 @@ class_name cycle
 #functions var
 
 @export var buyAmount:Big
+@export var calC:int
+@export var capC:int
 
+@export var calI:int
+@export var capI:int
 #UI
 
 @export var upgradeAmountButton:OptionButton
@@ -98,8 +102,28 @@ func setUnits():
 	caloriesUnit.setUnit(cal,buyAmount)
 	capacityUnit.setUnit(cap,buyAmount)
 	#put in an update for capt/calt text
+	var e = Big.new(0,0)
+	var i = Big.new(1,0)
+	var c = Big.new(0,0)
+	for x in cal:
+		#adding combined effect
+		e = e.add(e,i.multiply(x.effect,x.level))
+		i = i.multiply(i,individualeffect(x.level,calI))
+		c = c.add(c,x.level)
 	
-	#put in update for energy values.
+	e = e.multiply(i,e)
+	e = e.multiply(e,collectiveEffect(c,calC))
+	calPTText.text = "Calories Per turn "+ e.toScientific() +'\n'+"I: " + i.toScientific() + '\n' + "C:" + collectiveEffect(c,calC).toScientific()
+	e = Big.new(0,0)
+	i = Big.new(1,0)
+	c = Big.new(0,0)
+	for x in cap:
+		e = e.add(e,i.multiply(x.effect,x.level))
+		i = i.multiply(i,individualeffect(x.level,capI))
+		c = c.add(c,x.level)
+	capPTText.text = "Capacity Per turn "+ e.toScientific() +'\n'+"I: " + i.toScientific() + '\n' + "C:" + collectiveEffect(c,calC).toScientific()
+	
+	
 	updateEnergy()
 
 func updateEnergy():
@@ -122,29 +146,34 @@ func endTurn() -> void:
 	var i = Big.new(0,0)
 	var c = Big.new(0,0)
 	var m = Big.new(1,0)
+	var ind = Big.new(1,0)
 	#calculation that is done at the end of turn to determine how the upgrades apply all together.
 	for x in cal:
 		var h = Big.new(1,0)
 		c = c.add(x.level,c)
-		
+		ind = ind.multiply(ind,individualeffect(x.level,calI))
 		
 		h = h.multiply(x.level,x.effect)
 		i = i.add(i,h)
 	#then do multiplications and add accordingly.
-	
+	c = collectiveEffect(c,calC)
 	#first factor is to do individual levels, and then combined levels
-	
+	i = i.multiply(i,i.multiply(c,ind))
 	
 	calories = calories.add(calories,i)
 	#reset functions for c, i and m
 	c = Big.new(0,0)
 	i = Big.new(0,0)
 	m = Big.new(1,0)
+	ind = Big.new(1,0)
 	for x in cap:
 		var h = Big.new(1,0)
 		c = c.add(x.level,c)
 		h = h.multiply(x.level,x.effect)
 		i = i.add(i,h)
+		ind = ind.multiply(ind,individualeffect(x.level,capI))
+	c = collectiveEffect(c,capC)
+	i = i.multiply(i,i.multiply(c,ind))
 	capacity = calories.add(capacity,i)
 	turns.add(turns,1)
 	energy = energy.subtract(energy,turnEnergyCost)
@@ -156,7 +185,7 @@ func endTurn() -> void:
 
 func resetCyle():
 	p.fat = p.fat.add(p.fat,calories.divide(calories,2000))
-	
+	p.v = p.v.add(p.v,capacity.divide(capacity,10000))
 	
 	cyclem.reset()
 	setUnits()
@@ -168,3 +197,29 @@ func resetCyle():
 
 func _on_buy_amount_item_selected(index: int) -> void:
 	setUnits()
+
+
+func collectiveEffect(l:Big,s:int):
+	var k = Big.new(1,0)
+	var m = Big.new(2,0)
+	if(s== 0):
+		return k
+	while s >=1:
+		k = k.multiply(k,m.power(m,k.roundDown(l.divide(l,l.multiply(25,l.power(Big.new(2),m.subtract(m,2)))))))
+		s-=1
+		m =m.add(m,1)
+	
+	return k
+#b refers to amount used to calculate, s refers to scale
+func individualeffect(l:Big,s:int):
+	var k = Big.new(1,0)
+	var m = Big.new(2,0)
+	if(s == 0):
+		return k
+	k = k.multiply(k,k.power(m,k.roundDown(k.divide(l,10))))
+	s -=1
+	while s >=1:
+		m = m.add(m,1)
+		k = k.multiply(k,m.power(m,k.roundDown(l.divide(l,l.multiply(25,l.power(Big.new(2),m.subtract(m,3)))))))
+		s-=1
+	return k
