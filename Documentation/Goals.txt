@@ -31,6 +31,8 @@ Tab is now unlockable.
 
 Game is now set on the cycle side, only needs a manual reset system in case energy counts get massively large,could use a function
 to adjust for that as well as a function for multiple turns being taken at once. 
+Added an energy multiplier based on effect of the ENE base unit.
+Now two functions, the premature reset, and the buy more turns effect system.
 
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus

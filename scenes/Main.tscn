@@ -264,6 +264,7 @@ metadata/_tab_index = 2
 script = ExtResource("10_mwcfl")
 cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])
 cap = Array[ExtResource("2_4bjm2")]([ExtResource("6_ssl8l")])
+ene = ExtResource("7_f4leg")
 energy = SubResource("Resource_oh47p")
 capacity = SubResource("Resource_i227t")
 

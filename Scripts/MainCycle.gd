@@ -127,7 +127,7 @@ func setUnits():
 	updateEnergy()
 
 func updateEnergy():
-	energyText.text = "Energy amount: " + energy.toScientific() +'\n' + "Calories cost: " + ene.buy(buyAmount).toScientific() + '\n' + "buy amount: " + buyAmount.toScientific()
+	energyText.text = "Energy amount: " + energy.toScientific() +'\n' + "Calories cost: " + ene.buy(buyAmount).toScientific() + '\n' + "buy amount: " + buyAmount.multiply(buyAmount,ene.effect).toScientific()
 	
 
 #next to work on is energy buying.
@@ -137,7 +137,7 @@ func buyEnergy():
 	if (t.mantissa <0):
 		return
 	calories = t
-	energy = energy.add(buyAmount,energy)
+	energy = energy.add(buyAmount.multiply(buyAmount,ene.effect),energy)
 	ene.addLevel(buyAmount)
 	setUnits()
 	print( "cost as in the cycle is!: " + cyclem.cal[0].cost.toScientific())
