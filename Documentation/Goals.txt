@@ -33,7 +33,10 @@ Game is now set on the cycle side, only needs a manual reset system in case ener
 to adjust for that as well as a function for multiple turns being taken at once. 
 Added an energy multiplier based on effect of the ENE base unit.
 Now two functions, the premature reset, and the buy more turns effect system.
+Buy more turns effect is in place, but not complete, one thing to note is that the code has technical problems when involving negative numbers
+Work on putting into place the full effect of the turn effects visually.
 
+Go ovewr and patch up errors of the code involving the big numberscomparators later.
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus
  a specific function is needed to be in place just in case for one being used.

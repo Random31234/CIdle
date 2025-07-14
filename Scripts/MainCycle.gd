@@ -23,7 +23,7 @@ class_name cycle
 #UI
 
 @export var upgradeAmountButton:OptionButton
-
+@export var endTurnButton:Button
 #buyables
 @export var cal:Array[baseUnit]
 @export var cap:Array[baseUnit]
@@ -123,7 +123,7 @@ func setUnits():
 		c = c.add(c,x.level)
 	capPTText.text = "Capacity Per turn "+ e.toScientific() +'\n'+"I: " + i.toScientific() + '\n' + "C:" + collectiveEffect(c,calC).toScientific()
 	
-	
+	endTurnButton.text = "end turn x" + buyAmount.toScientific()
 	updateEnergy()
 
 func updateEnergy():
@@ -159,8 +159,10 @@ func endTurn() -> void:
 	c = collectiveEffect(c,calC)
 	#first factor is to do individual levels, and then combined levels
 	i = i.multiply(i,i.multiply(c,ind))
+	var g = i
+	if(buyAmount.isLessThanOrEqualTo(1)):
+		calories = calories.add(calories,g)
 	
-	calories = calories.add(calories,i)
 	#reset functions for c, i and m
 	c = Big.new(0,0)
 	i = Big.new(0,0)
@@ -174,14 +176,20 @@ func endTurn() -> void:
 		ind = ind.multiply(ind,individualeffect(x.level,capI))
 	c = collectiveEffect(c,capC)
 	i = i.multiply(i,i.multiply(c,ind))
-	capacity = calories.add(capacity,i)
+	var z = i
+	if buyAmount.isLessThanOrEqualTo(1):
+		capacity = calories.add(capacity,i)
 	turns.add(turns,1)
-	energy = energy.subtract(energy,turnEnergyCost)
+	energy = energy.subtract(energy,turnEnergyCost.multiply(turnEnergyCost,buyAmount))
 	setUnits()
-	
-	if energy.isLessThan(0):
+	print(energy.isLessThan(Big.new(0,0)))
+	if(buyAmount.isGreaterThan(1) && !energy.isLessThan(0)):
+		calories = calories.add(g.multiply(g,buyAmount),calories)
+		capacity = capacity.add(z.multiply(z,buyAmount), capacity)
+	if energy.isLessThan(Big.new(0,0)):
 		resetCyle()
 		emit_signal("unlock")
+
 
 func resetCyle():
 	p.fat = p.fat.add(p.fat,calories.divide(calories,2000))

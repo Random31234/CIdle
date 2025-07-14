@@ -86,7 +86,7 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "cyclem", "p", "upgradeAmountButton", "calText", "calPTText", "capText", "capPTText", "energyText")]
+[node name="Cycle" type="Control" parent="Base game" node_paths=PackedStringArray("caloriesUnit", "capacityUnit", "cyclem", "p", "upgradeAmountButton", "endTurnButton", "calText", "calPTText", "capText", "capPTText", "energyText")]
 editor_description = "Main game Node"
 custom_minimum_size = Vector2(1152, 512)
 layout_mode = 2
@@ -99,8 +99,8 @@ calories = SubResource("Resource_kony0")
 capacity = SubResource("Resource_0ex3l")
 energy = SubResource("Resource_lbdo5")
 buyAmount = SubResource("Resource_0g85k")
-capI = 4
 upgradeAmountButton = NodePath("Buy amount")
+endTurnButton = NodePath("Turn button")
 cal = Array[ExtResource("2_4bjm2")]([ExtResource("4_weol4"), ExtResource("5_2wcdr")])
 cap = Array[ExtResource("2_4bjm2")]([ExtResource("6_ssl8l")])
 ene = ExtResource("7_f4leg")
@@ -252,6 +252,14 @@ popup/item_5/id = 5
 popup/item_6/text = "buy 1000"
 popup/item_6/id = 6
 
+[node name="End cycle button" type="Button" parent="Base game/Cycle"]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 586.0
+offset_right = 1152.0
+offset_bottom = 617.0
+text = "End Cycle"
+
 [node name="Rest" type="Control" parent="Base game"]
 visible = false
 layout_mode = 2
@@ -274,3 +282,4 @@ capacity = SubResource("Resource_i227t")
 [connection signal="Value" from="Base game/Cycle/Calories/Calories Scroll Container/Calories" to="Base game/Cycle" method="_on_calories_value"]
 [connection signal="Value" from="Base game/Cycle/Capacity/Capacity scroll container/Capacity" to="Base game/Cycle" method="_on_capacity_value"]
 [connection signal="item_selected" from="Base game/Cycle/Buy amount" to="Base game/Cycle" method="_on_buy_amount_item_selected"]
+[connection signal="button_down" from="Base game/Cycle/End cycle button" to="Base game/Cycle" method="resetCyle"]

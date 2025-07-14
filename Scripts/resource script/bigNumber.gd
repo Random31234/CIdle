@@ -532,6 +532,9 @@ func isGreaterThanOrEqualTo(n) -> bool:
 func isLessThan(n) -> bool:
 	n = Big._typeCheck(n)
 	Big.normalize(n)
+	if mantissa <0:
+		if(n.mantissa >=0):
+			return true
 	if (mantissa == 0
 			and (n.mantissa > MANTISSA_PRECISION or mantissa < MANTISSA_PRECISION)
 			and n.mantissa == 0
