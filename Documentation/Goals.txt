@@ -42,6 +42,7 @@ Now work on the skill tree system
 
 Ok better solution for skill tree system, every button can be put into a series of arrays and theior positions can be adjusted accordingly
 From there functions that prevent buying of effects can be put into place to insure they function as needed.
+So for example capacity boosting skill buttons on the tree will all be put into the same array.
 
 
 Go ovewr and patch up errors of the code involving the big numberscomparators later.
