@@ -36,6 +36,14 @@ Now two functions, the premature reset, and the buy more turns effect system.
 Buy more turns effect is in place, but not complete, one thing to note is that the code has technical problems when involving negative numbers
 Work on putting into place the full effect of the turn effects visually.
 
+turn effects are now properly visually conveyed
+
+Now work on the skill tree system
+
+Ok better solution for skill tree system, every button can be put into a series of arrays and theior positions can be adjusted accordingly
+From there functions that prevent buying of effects can be put into place to insure they function as needed.
+
+
 Go ovewr and patch up errors of the code involving the big numberscomparators later.
 
 #note, a factor in which that must be considered is that x cannot equal 1, it must be subtracted by 1 and thus

@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://xttxajeqoxdd"]
+
+[ext_resource type="Script" path="res://skillTree.gd" id="1_loaon"]
+[ext_resource type="PackedScene" uid="uid://5wi304px82rf" path="res://scenes/SkillTreeButton.tscn" id="2_dth13"]
+[ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="3_hv0p4"]
+
+[sub_resource type="Resource" id="Resource_yjl0m"]
+script = ExtResource("3_hv0p4")
+mantissa = 0.0
+exponent = 0
+
+[sub_resource type="Resource" id="Resource_6r67d"]
+script = ExtResource("3_hv0p4")
+mantissa = 0.0
+exponent = 0
+
+[node name="Control" type="Control" node_paths=PackedStringArray("starter1", "starter2")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_loaon")
+starter1 = NodePath("TextureButton")
+starter2 = NodePath("TextureButton2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 1600.0
+
+[node name="TextureButton" parent="." instance=ExtResource("2_dth13")]
+layout_mode = 0
+cost = SubResource("Resource_yjl0m")
+scaler = SubResource("Resource_6r67d")
+
+[node name="TextureButton" parent="TextureButton" instance=ExtResource("2_dth13")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 273.0
+offset_right = 136.0
+offset_bottom = 313.0
+
+[node name="TextureButton" parent="TextureButton/TextureButton" instance=ExtResource("2_dth13")]
+layout_mode = 0
+offset_left = 124.0
+offset_top = -124.0
+offset_right = 164.0
+offset_bottom = -84.0
+
+[node name="TextureButton2" parent="." instance=ExtResource("2_dth13")]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 220.0
+offset_right = 356.0
+offset_bottom = 260.0
