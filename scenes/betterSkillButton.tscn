@@ -8,6 +8,12 @@
 offset_right = 128.0
 offset_bottom = 160.0
 script = ExtResource("1_batij")
+limit = 4
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 160.0
 
 [node name="base" type="Sprite2D" parent="."]
 position = Vector2(64, 64)
