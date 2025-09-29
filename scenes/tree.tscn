@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://xttxajeqoxdd"]
 
-[ext_resource type="Script" path="res://skillTree.gd" id="1_loaon"]
+[ext_resource type="Script" path="res://Scripts/UI Scripts/skillTree.gd" id="1_loaon"]
 [ext_resource type="PackedScene" uid="uid://5wi304px82rf" path="res://scenes/SkillTreeButton.tscn" id="2_dth13"]
 [ext_resource type="Script" path="res://Scripts/resource script/bigNumber.gd" id="3_hv0p4"]
 
